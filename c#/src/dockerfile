@@ -8,10 +8,10 @@ RUN curl -sSL https://aka.ms/getvsdbgsh | /bin/sh /dev/stdin -v latest -l ~/vsdb
 RUN mkdir /work/
 WORKDIR /work/
 
-COPY ./src/work.csproj /work/work.csproj
+COPY ./work.csproj /work/work.csproj
 RUN dotnet restore
 
-COPY ./src/ /work/
+COPY ./ /work/
 RUN mkdir /out/
 RUN dotnet publish --no-restore --output /out/ --configuration Release
 

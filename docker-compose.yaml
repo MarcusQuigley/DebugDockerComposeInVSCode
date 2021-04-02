@@ -4,7 +4,7 @@ services:
     container_name: csharp
     image: aimvector/csharp:1.0.0
     build:
-      context: ./c#
+      context: ./c#/src
       target: debug
     volumes:
     - ./c#/src/:/work/
